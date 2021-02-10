@@ -1,0 +1,36 @@
+{
+  "name": "ts-miniprogram-template",
+  "version": "0.0.0",
+  "description": "A TypeScript Miniprogram template",
+  "scripts": {
+    "build": "npm run copy && npm run build-ts",
+    "build-ts": "tsc -p tsconfig.json",
+    "watch": "tsc -w -p tsconfig.json",
+    "copy": "cpy \"**/*\" \"!**/*.ts\" \"../dist/\" --cwd=src --parents",
+    "format": "prettier --write \"src/**/*.{js,ts,json}\" --loglevel warn",
+    "test": "jest --config"
+  },
+  "keywords": [],
+  "author": "keqingrong",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keqingrong/ts-miniprogram-template.git"
+  },
+  "dependencies": {
+    "qs": "^6.9.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@types/jest": "^26.0.20",
+    "@types/qs": "^6.9.5",
+    "@types/wechat-miniprogram": "^3.2.0",
+    "babel-jest": "^26.6.3",
+    "cpy-cli": "^3.1.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  }
+}
